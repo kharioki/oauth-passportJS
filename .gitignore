@@ -13,3 +13,6 @@ yarn-error.log
 
 # tests
 coverage/
+
+# config
+config/keys.js
