@@ -1,0 +1,27 @@
+{
+  "name": "oauth-passportjs",
+  "version": "1.0.0",
+  "description": "implementing oauth with passport js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kharioki/oauth-passportJS.git"
+  },
+  "keywords": [
+    "oauth",
+    "passportjs"
+  ],
+  "author": "kharioki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kharioki/oauth-passportJS/issues"
+  },
+  "homepage": "https://github.com/kharioki/oauth-passportJS#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
