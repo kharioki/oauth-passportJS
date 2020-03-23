@@ -3,60 +3,75 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <style>
-        body{
-            font-family: arial;
-            margin: 0;
-        }
-        nav{
-            background: #ff5353;
-            padding: 20px 10px;
-        }
-        nav ul{
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0;
-        }
-        nav li{
-            list-style-type: none;
-            display: inline-block;
-            margin: 0 10px 0 0;
-        }
-        nav a{
-            color: #fff;
-            font-size: 18px;
-            background: rgba(255,255,255,0.2);
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-        }
-        main, header{
-            max-width: 960px;
-            margin: 30px auto;
-            padding: 0 10px;
-            color: #333;
-        }
-    </style>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>OAuth Tutorials</title>
+        <title>Profile</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <style>
+            body{
+                font-family: arial;
+                margin: 0;
+            }
+            nav{
+                background: #ff5353;
+                padding: 20px 10px;
+            }
+            nav ul{
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 0;
+            }
+            nav li{
+                list-style-type: none;
+                display: inline-block;
+                margin: 0 10px 0 0;
+            }
+            nav a{
+                color: #fff;
+                font-size: 18px;
+                background: rgba(255,255,255,0.2);
+                text-decoration: none;
+                padding: 10px;
+                display: block;
+            }
+            main, header{
+                max-width: 960px;
+                margin: 30px auto;
+                padding: 0 10px;
+                color: #333;
+            }
+            main img{
+                width: 40px;
+                margin-right: 10px;
+                position: relative;
+                top: 12px;
+            }
+            main p{
+                display: inline-block;
+            }
+        </style>
     </head>
     <body>
         <nav>
             <ul>
-                <li><a href="/auth/logout">Logout</a></li>
-                <li><a href="/auth/login">Login</a></li>
+                <% if (user) { %>
+                    <li><a href="/auth/logout">Logout</a></li>
+                <% } else { %>
+                    <li><a href="/auth/login">Login</a></li>
+                <% } %>
                 <li><a href="/">Homepage</a></li>
+                <li><a href="/profile">Profile</a></li>
             </ul>
         </nav>
         <header>
             <h1>Welcome to your profile, <%= user.username %> </h1>
         </header>
         <main>
+            <img src="<%= user.thumbnail %>" />
+            <p>This is your profile thumbnail</p>
         </main>
         
         <script src="" async defer></script>
