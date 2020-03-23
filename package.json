@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/kharioki/oauth-passportJS#readme",
   "dependencies": {
+    "cookie-session": "^1.4.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.9.5",
